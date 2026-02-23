@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<header class="navbar">
+  <div class="logo">MyPortfolio</div>
+
+  <!-- TOGGLE ICON -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+ 
+  
+<section class="home" id="home" class="section animate">
+    <div class="home-content" style="height: 400px;">
+      <h1>Hello, I'm <span>LOGANAYAKI</span></h1>
+      <h2 id="typing">FRONT END DEVELOPER</h2>
+
+      <a href="./loga resume.pdf" download >
+       <button class="btn"> <span>⬇️</span> Download CV</button></a>
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="about" class="section animate">
+  <div class="about-card">
+
+    <h2>About Me</h2>
+
+    <p class="about-text">
+      I am a Front-End Developer fresher with knowledge of
+       HTML, CSs and JavaScript. I enjoy building 
+       responsive and user-friendly websites.
+
+
+    </p>
+
+    <h3 class="sub-title">Education & Internship</h3>
+
+    <div class="timeline">
+      <div class="item">
+        <span class="dot"></span>
+        <h4>Front End Developer Intern</h4>
+        <p>Optimus Technocrates (India)Pvt.Ltd</p>
+        <small>3 Months(Oct to Dec - 2025)</small>
+      </div>
+
+      <div class="item">
+        <span class="dot"></span>
+        <h4>MASTER OF COMPUTER SCIENCE</h4>
+        <p>Padmavani Arts and Science College for Women,Salem.</p>
+        <small>2022 - 2024</small>
+      </div>
+
+      <div class="item">
+        <span class="dot"></span>
+        <h4>BACHELOR OF COMPUTER SCIENCE</h4>
+        <p>Padmavani Arts and Science College for Women,Salem.</p>
+        <small>2019 - 2022</small>
+      </div>
+
+      <div class="item">
+        <span class="dot"></span>
+        <h4>HIGHER SECONDARY</h4>
+        <p>St.Mary’s Girls Hr. Sec.School.,Mettur.</p>
+        <small>2017 – 2019</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="section animate">
+  <h2>My Skills</h2>
+
+  <div class="skills">
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>Responsive Design</span>
+    <span>Git & GitHub</span>
+    <span>VS Code</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+  <section class="projects-section" class="section animate">
+
+  <h1 class="project-heading">My Projects</h1>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="image/port3.jpg" alt="Portfolio" style="height: 250px;">
+   <h2>Personal Portfolio Website</h2>
+      <p >
+        Designed and developed a responsive personal portfolio website
+        to showcase skills and projects.
+      </p>
+      <div class="links" style="padding: 0;">
+        <a href="#">GitHub</a>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="./image/hot.avif" alt="Restaurant" style="height: 250px;">
+      <h2>Restaurant Website</h2>
+      <p>
+        Built a modern restaurant website with menu and contact sections.
+      </p>
+      <div class="links" style="padding: 25px;">
+        <a href="https://github.com/loganayakithillai19-web/optimus-tech">GitHub</a>
+        <a href=" https://loganayakithillai19-web.github.io/TastyByte-Restaurent/">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="./image/ins.jpg" alt="Academy" style="height: 250px;">
+      <h2>Academy Website</h2>
+      <p>
+        Educational website with course and registration sections.
+      </p>
+      <div class="links" style="padding: 25px;">
+        <a href="https://github.com/loganayakithillai19-web/optimus-tech">GitHub</a>
+        <a href="https://loganayakithillai19-web.github.io/optimus-tech/">Live Demo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Contact -->
+   
+  <section class="contact-section" id="contact" class="section animate">
+  <h2 class="contact-title">Contact</h2>
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="contact-image">
+      <img src="./image/phone2.avif" alt="Contact Image">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <form id="contactForm" class="contact-form">
+
+      <div class="field">
+        <input type="text" id="name" placeholder="Full Name">
+        <small class="error"></small>
+      </div>
+
+      <div class="field">
+        <input type="email" id="email" placeholder="Email Address">
+        <small class="error"></small>
+      </div>
+
+      <div class="field">
+        <input type="text" id="mobile" placeholder="Mobile Number">
+        <small class="error"></small>
+      </div>
+
+      <div class="field">
+        <textarea id="message" placeholder="Message"></textarea>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <span class="btn-text">Send Message</span>
+        <span class="loader"></span>
+      </button>
+
+      <div class="success-box" id="successBox">
+        <div class="checkmark">✔</div>
+        <p>Message Sent Successfully</p>
+      </div>
+
+    </form>
+  </div>
+
+  <canvas id="confetti"></canvas>
+</section>
+
+<script src="contact.js"></script>
+<script src="script.js"></script>
+
+ <footer>
+    <p>© 2025 My Portfolio</p>
+   </footer> 
+
+</body>
+</html>
