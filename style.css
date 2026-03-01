@@ -358,13 +358,10 @@ html{
 
 /* PROJECT SECTION */
 
-/* SECTION */
+/* ===== PROJECT SECTION ===== */
 .projects-section {
   padding: 60px 20px;
-  background-color: #0a0a0a;
-  position: relative;
-  z-index: 1;
-  padding-bottom: 80px;
+  background: #0a0a0a;
 }
 
 .project-heading {
@@ -372,82 +369,98 @@ html{
   color: #fff;
   font-size: 36px;
   margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-.project-heading::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #0c0c0c;
-  margin: 10px auto 0;
-  border-radius: 2px;
 }
 
-/* GRID */
+/* ===== GRID DESKTOP ===== */
 .projects-grid {
-  max-width: 1700px;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* LAP VIEW */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* CARD */
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(1,1fr);
+    
+  }
+  .project-card img{
+    width:100%;
+    border-radius: 14px;
+    display: block;
+  }
+}
+
+/* ===== MOBILE — ONE BY ONE ===== */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card {
+    max-width: 100%;
+    width: 100%;
+  
+  }
+
+
+  .project-card img {
+    height:200px;
+    width: 100%;
+    object-fit: cover;
+    max-height: none;
+
+  }
+}
+
+
+
+/* ===== CARD ===== */
 .project-card {
-  background: #0f0e0e;
-  border-radius: 16px;
-  padding: 20px;
+  background: #111;
+  padding: 18px;
+  border-radius: 14px;
   text-align: center;
+  transition: 0.3s ease;
 }
 
-/* IMAGE */
-.project-card img {
+.project-card:hover {
+  transform: translateY(-6px);
+}
+.project-image {
   width: 100%;
-  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.project-card img {
+  width: 90%;
+  height: 50%;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  border-radius: 14px;
+  display: block;
 }
 
-/* TEXT */
 .project-card h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
   color: white;
+  font-size: 20px;
+  margin: 12px 0;
 }
 
 .project-card p {
-  font-size: 17px;
-  color: #f8f4f4;
-  line-height: 1.2;
-  margin-bottom: 15px;
-  padding: 10px;
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-/* LINKS */
 .links a {
-  text-decoration: none;
-  color:#f574bf;
+  color: #ff4db8;
   font-weight: bold;
-  margin: 0 10px;
+  margin: 5px 8px;
+  text-decoration: none;
   
 }
-
-/* ✅ MOBILE VIEW – ONE BY ONE */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* mobile heading size */
-@media (max-width: 768px) {
-  .project-heading {
-    font-size: 28px;
-  }
-}
-
 
 /* CONTACT SECTION */
 .contact-section{
@@ -465,17 +478,25 @@ html{
 .contact-wrapper{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content:space-between;
   max-width: 1100px;
   margin: auto;
+  flex-wrap: wrap; /* 🔥 important */
+  gap: 40px;
+  /* max-width: 1100px;
+  margin: auto; */
 }
+  /* image full width */
+  .contact-image {
+   flex:1 ;
+  }
 
 /* LEFT IMAGE */
 .contact-image img{
-  width: 550px;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 520px;
   border-radius: 20px;
+  display: block;
   transition: 0.4s;
 }
 .contact-image img:hover{
@@ -484,15 +505,41 @@ html{
 
 /* RIGHT FORM */
 .contact-form{
-  width: 480px;
-  padding: 25px;
+  flex:1;
+  width: 100%;
+  max-width: 480px;
   border-radius: 20px;
   background: #474646;
-  transition: 0.4s;
+  transition: 0.4s; 
+  padding: 25px;
 }
+  /* padding: 25px;
+  border-radius: 20px;
+  background: #474646;
+  transition: 0.4s; */
+
 .contact-form:hover{
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .contact-wrapper {
+     flex-direction: column!important;   /*🔥 main fix */
+    gap: 20px;
+    align-items: stretch;
+  }
+   .contact-image,
+  .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+
+  }
+
+  .contact-image img {
+    width: 100% !important;
+  }
 }
 
 .field{
@@ -514,9 +561,7 @@ html{
 
 .field textarea{
   resize: none;
-  
   height: 100px;
-  
 }
 
 .error{
